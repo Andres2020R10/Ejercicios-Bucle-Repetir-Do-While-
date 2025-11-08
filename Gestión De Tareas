@@ -1,0 +1,23 @@
+Proceso GestionTareas
+    Definir tarea, descripcion, fecha, lista_tareas Como Cadena
+    Definir continuar Como Entero
+    lista_tareas <- ""
+    
+    Repetir
+        Escribir "Ingrese el nombre de la tarea:"
+        Leer tarea
+        Escribir "Ingrese la descripción de la tarea:"
+        Leer descripcion
+        Escribir "Ingrese la fecha de vencimiento:"
+        Leer fecha
+        
+        lista_tareas <- lista_tareas + "Tarea: " + tarea + " | Descripción: " + descripcion + " | Vence: " + fecha + "\n"
+        
+        Escribir "¿Desea agregar otra tarea? (1=Sí / 0=No):"
+        Leer continuar
+    Hasta Que continuar = 0
+    
+    Escribir ""
+    Escribir "LISTA DE TAREAS:"
+    Escribir lista_tareas
+FinProceso
