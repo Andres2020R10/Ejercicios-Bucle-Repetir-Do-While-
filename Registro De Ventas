@@ -1,0 +1,25 @@
+Proceso RegistroVentas
+    Definir producto, lista_productos Como Cadena
+    Definir precio, total Como Real
+    Definir continuar Como Entero
+    lista_productos <- ""
+    total <- 0
+    
+    Repetir
+        Escribir "Ingrese el nombre del producto vendido:"
+        Leer producto
+        Escribir "Ingrese el precio del producto:"
+        Leer precio
+        
+        lista_productos <- lista_productos + producto + " - $" + ConvertirATexto(precio) + "\n"
+        total <- total + precio
+        
+        Escribir "¿Desea registrar otra venta? (1=Sí / 0=No):"
+        Leer continuar
+    Hasta Que continuar = 0
+    
+    Escribir ""
+    Escribir "VENTAS REGISTRADAS:"
+    Escribir lista_productos
+    Escribir "Monto total de ventas: $", total
+FinProceso
