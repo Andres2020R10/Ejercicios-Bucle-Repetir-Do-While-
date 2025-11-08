@@ -1,0 +1,31 @@
+Proceso MenuComidasRapidas
+    Definir opcion Como Entero
+    Definir total Como Real
+    total <- 0
+    
+    Repetir
+        Escribir "Menú de comidas rápidas"
+        Escribir "1. Hamburguesa - $12000"
+        Escribir "2. Perro caliente - $10000"
+        Escribir "3. Papas fritas - $8000"
+        Escribir "4. Gaseosa - $5000"
+        Escribir "5. Finalizar pedido"
+        Escribir "Elija una opción:"
+        Leer opcion
+        
+        Segun opcion Hacer
+            1:
+                total <- total + 12000
+            2:
+                total <- total + 10000
+            3:
+                total <- total + 8000
+            4:
+                total <- total + 5000
+        FinSegun
+    Hasta Que opcion = 5
+    
+    Escribir ""
+    Escribir "El costo total de su pedido es: $", total
+    Escribir "Gracias por su compra!"
+FinProceso
